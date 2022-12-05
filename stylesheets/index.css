@@ -1,4 +1,12 @@
 @import "./typography.css";
+
+:root {
+  /* Also remember to change theme color in html head*/
+  /* --primary-bg-color: #035183; */
+  --primary-bg-color: #337964;
+  --secondary-bg-color: #fff0fc;
+}
+
 html { 
   height: 100%;
   display: flex;
@@ -16,8 +24,9 @@ body {
   padding-top: 1rem;
   height: 100%;
   margin: 0;
-  background-color: #035183;
+  background-color: var(--primary-bg-color);
 }
+
 
 footer {
   color: whitesmoke;
@@ -26,15 +35,34 @@ footer {
 header {
   padding: 1.5rem 0 1.5rem 0;
   color: white;
-  background-color: #035183;
+  background-color: var(--primary-bg-color);
 }
 
 #wordmark {
   width: 30rem;
-  max-width: 84vw;
+  max-width: 80rem;
   align-self: center;
   padding: 0 8vw;
 }
+
+@media (min-width: 43rem){
+  #wordmark {
+    max-width: 20rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  #wordmark {
+    max-width: 10rem;
+  }
+}
+
+@media (min-width: 82rem) {
+  #wordmark {
+    max-width: 8rem;
+  }
+}
+
 
 .row {
   display: flex;
@@ -53,8 +81,8 @@ header {
 }
 
 #main {
-  color: #035183;
-  background-color: #fff0fc;
+  color: var(--primary-bg-color);
+  background-color: var(--secondary-bg-color);
   width: 100%;
   flex-grow: 1;
 }
@@ -69,9 +97,44 @@ div#content {
   flex-grow: 1;
 }
 
+@media (min-width: 43rem){
+  div#content {
+    width: 30rem;
+    height: 100%;
+    text-align: left;
+    padding: 3rem 8vw 0 8vw;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 62rem) {
+  div#content {
+    align-self: center; 
+    width: 20rem;
+    max-width: 84vw;
+    height: 100%;
+    text-align: left;
+    padding: 3rem 8vw 0 8vw;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: 82rem) {
+  div#content {
+    align-self: center; 
+    width: 15rem;
+    max-width: 84vw;
+    height: 100%;
+    text-align: left;
+    padding: 3rem 8vw 0 8vw;
+    flex-grow: 1;
+  }
+}
+
 footer {
-  color: #035183;
+  color: whitesmoke;
   width: 100%;
-  background-color: #fff0fc;
-  padding: 1rem;
+  background-color: var(--secondary-bg-color);
+  flex-grow: 1;
+  align-self: flex-end;
 }
