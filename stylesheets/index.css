@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  transition: all 200ms ease-in-out;
+  /* transition: all 200ms ease-in-out; */
   display: flex;
   flex-direction: column;
   align-items: center;
