@@ -4,15 +4,20 @@
   /* Also remember to change theme color in html head*/
   /* --primary-bg-color: #035183; */
   --primary-bg-color: #337964;
+  --primary-bg-color-accent: hsl(161, 41%, 88%);
   --secondary-bg-color: #fff0fc;
+  --secondary-bg-color-accent: hsl(300, 30%, 94%);
 }
+
+html { font-size: 2.4vw; }
+@media all and (min-width:1000px) { html { font-size: 24px; } }
+@media all and (max-width:520px) { html{ font-size: 18px; } }
+
 
 html { 
   height: 100%;
   display: flex;
   flex-direction: column;
-  font-size: 36px;
-  font-size: 3vw;
 }
 
 body {
@@ -32,17 +37,52 @@ footer {
   color: whitesmoke;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  background: var(--secondary-bg-color-accent);
+  border-radius: 0.2rem;
+  padding-inline: 0.1rem;
+  transition-property: background;
+  transition-duration: 0.2s;
+  }
+
+a:hover {
+  background: var(--primary-bg-color-accent);
+  transition-property: all;
+  transition-duration: 0.2s;
+  
+  }
+
+a:before {
+  position: relative;
+  content: "\02197";
+  margin-right: 0.10em;
+  font-size: 90%;
+  top: -0.10em;
+  /* color: #933; */
+  font-feature-settings: "caps";
+  font-variant-numeric: normal;
+  text-decoration: none;
+}
+
 header {
   padding: 1.5rem 0 1.5rem 0;
   color: white;
   background-color: var(--primary-bg-color);
 }
 
+li { 
+  column-break-inside: avoid;
+  break-inside: avoid-column;
+  margin-left: 1rem;
+  }
+
 #wordmark {
-  width: 30rem;
-  max-width: 80rem;
+  width: 80vw;
+  /* max-width: 80rem; */
   align-self: center;
-  padding: 0 8vw;
+  padding: 1em 0;
 }
 
 @media (min-width: 43rem){
@@ -87,22 +127,32 @@ header {
   flex-grow: 1;
 }
 
+#address {
+  text-align: center;
+  font-size: 0.8em;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  font-family: "park-lane", serif;
+  font-weight: 100;
+  font-style: normal;
+  border-top-color: var(--secondary-bg-color);
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+}
+
 div#content {
   align-self: center; 
-  width: 40rem;
+  /* width: 40rem; */
   max-width: 84vw;
-  height: 100%;
   text-align: left;
-  padding: 3rem 8vw 0 8vw;
+  padding: 0rem 8vw 3rem 8vw;
   flex-grow: 1;
 }
 
 @media (min-width: 43rem){
   div#content {
     width: 30rem;
-    height: 100%;
     text-align: left;
-    padding: 3rem 8vw 0 8vw;
     flex-grow: 1;
   }
 }
@@ -110,11 +160,9 @@ div#content {
 @media (min-width: 62rem) {
   div#content {
     align-self: center; 
-    width: 20rem;
+    /* width: 20rem; */
     max-width: 84vw;
-    height: 100%;
     text-align: left;
-    padding: 3rem 8vw 0 8vw;
     flex-grow: 1;
   }
 }
@@ -122,11 +170,9 @@ div#content {
 @media (min-width: 82rem) {
   div#content {
     align-self: center; 
-    width: 15rem;
+    /* width: 15rem; */
     max-width: 84vw;
-    height: 100%;
     text-align: left;
-    padding: 3rem 8vw 0 8vw;
     flex-grow: 1;
   }
 }
