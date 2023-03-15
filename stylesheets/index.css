@@ -73,7 +73,6 @@ header {
 }
 
 li { 
-  column-break-inside: avoid;
   break-inside: avoid-column;
   margin-left: 1rem;
   }
