@@ -3,7 +3,7 @@
 :root {
   /* Also remember to change theme color in html head*/
   /* --primary-bg-color: #035183; */
-  --primary-bg-color: #337964;
+  --primary-bg-color: #28724F/* #337964 */;
   --primary-bg-color-accent: hsl(161, 41%, 88%);
   --secondary-bg-color: #fff0fc;
   --secondary-bg-color-accent: hsl(300, 30%, 94%);
@@ -38,6 +38,10 @@ footer {
 }
 
 a {
+  all: unset;
+}
+
+a.link {
   text-decoration: none;
   color: inherit;
   background: var(--secondary-bg-color-accent);
@@ -47,14 +51,14 @@ a {
   transition-duration: 0.2s;
   }
 
-a:hover {
+a.link:hover {
   background: var(--primary-bg-color-accent);
   transition-property: all;
   transition-duration: 0.2s;
   
   }
 
-a:before {
+a.link:before {
   position: relative;
   content: "\02197";
   margin-right: 0.10em;
@@ -64,6 +68,14 @@ a:before {
   font-feature-settings: "caps";
   font-variant-numeric: normal;
   text-decoration: none;
+}
+
+a.map:before {
+  content: "\1F4CD"
+}
+
+a.date:before {
+  content: "\1F4C5"
 }
 
 header {
